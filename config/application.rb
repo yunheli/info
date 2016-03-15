@@ -26,8 +26,20 @@ module Info
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
+    config.time_zone = 'Beijing'
+    config.exceptions_app = self.routes
+    config.autoload_paths << Rails.root.join('lib')
+    config.middleware.delete Rack::Lock
     config.generators do |g|
-      g.orm :mongoid
+      g.assets false
+      g.helper false
+    end
+
+    config.middleware.use Rack::Cors, debug: false do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :patch, :put, :delete], expose: ['Link', 'X-Records']
+      end
     end
   end
 end
