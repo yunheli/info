@@ -14,6 +14,22 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  # namespace :admin do
+  #   resources :users
+  # end
+
+  # scope "/admin", module: 'admin' do
+  #   resources :articles, :comments
+  # end
+
+
+  concern :commentable do
+    resources :comments
+  end
+
+  resources :magazines do
+    resources :ads, shallow: true
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do
