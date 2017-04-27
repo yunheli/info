@@ -135,7 +135,7 @@ test:
     default:
       database: info_test
       hosts:
-        - localhost:27017
+        - <%= ENV["MONGO_PORT_27017_TCP_ADDR"]%>:27017
       options:
         read:
           mode: :primary
