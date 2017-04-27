@@ -30,6 +30,6 @@ build:
     after-steps: 
         - wantedly/pretty-slack-notify:
             webhook_url: "https://hooks.slack.com/services/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"
-        - illcoding/dingtalk-notify@0.0.1:
+        - willcoding/dingtalk-notify@0.0.1:
             webhook_url: "https://oapi.dingtalk.com/robot/send?access_token=b6ab22a0a939d753670387026d38dd7c5b180fb6916398fb7b81627e9f636b45"
-            
+            message: "hello" 
