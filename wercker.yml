@@ -27,3 +27,6 @@ build:
             code: | 
                 bundle exec rake test
                 env
+    after-steps: 
+        - wantedly/pretty-slack-notify:
+            webhook_url: "https://hooks.slack.com/services/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"
