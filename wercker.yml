@@ -11,8 +11,7 @@ services:
     # http://devcenter.wercker.com/docs/services/postgresql.html
     - id: mysql
       ENV:
-        MYSQL_USER: root
-        MYSQL_PASSWORD: root
+        MYSQL_ROOT_PASSWORD: root
     # - mongo
     # http://devcenter.wercker.com/docs/services/mongodb.html
 
