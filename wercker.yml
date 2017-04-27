@@ -9,11 +9,7 @@ box: ruby:2.3.0
 services:
     # - postgres
     # http://devcenter.wercker.com/docs/services/postgresql.html
-    - id: mysql
-      env:
-        MYSQL_ROOT_USERNAME: root
-        MYSQL_ROOT_PASSWORD: 
-        MYSQL_DATABASE: test
+    - mongo
     # - mongo
     # http://devcenter.wercker.com/docs/services/mongodb.html
 
