@@ -24,4 +24,4 @@ build:
         - bundle-install
         - script:
             name: rspec
-            code: bundle exec rspec
+            code: bundle exec rake test
