@@ -36,15 +36,15 @@ build:
 deploy_alpha: 
     steps:
         - script:
-            name: rspec
+            name: deploy_alpha
             code: | 
                 echo "deploy_alpha"
 deploy_production: 
     steps:
         - script:
-            name: deploy_alpha
+            name: deploy_production
             code: | 
-                echo "deploy_alpha"
+                echo "deploy_production"
 build_docker: 
     box: node
     steps:
