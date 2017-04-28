@@ -33,3 +33,29 @@ build:
         - willcoding/dingtalk-notify@0.0.1:
             webhook_url: "https://oapi.dingtalk.com/robot/send?access_token=b6ab22a0a939d753670387026d38dd7c5b180fb6916398fb7b81627e9f636b45"
             message: "welcome china" 
+deploy_alpha: 
+    steps:
+        - script:
+            name: rspec
+            code: | 
+                echo "deploy_alpha"
+deploy_production: 
+    steps:
+        - script:
+            name: deploy_alpha
+            code: | 
+                echo "deploy_alpha"
+build_docker: 
+    box: node
+    steps:
+        - script:
+            name: build_docker
+            code: | 
+                echo "build_docker"
+new_flow: 
+    box: ruby
+    steps:
+        - script:
+            name: new_flow
+            code: | 
+                echo "new_flow"
