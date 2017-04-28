@@ -18,14 +18,9 @@ services:
 # http://devcenter.wercker.com/docs/pipelines/index.html
 build:
     # Steps make up the actions in your pipeline
-    # Read more about steps on our dev center:
+    # Read more about steps on our dev center:1
     # http://devcenter.wercker.com/docs/steps/index.html    
     steps:
-        - script:
-            name: docker
-            code: | 
-                docker -v 
-                docker ps
         - bundle-install
         - script:
             name: rspec
