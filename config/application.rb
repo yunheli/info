@@ -1,7 +1,11 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
-
+# require 'rails/all'
+require "action_controller/railtie"
+require "action_mailer/railtie"
+# require "active_resource/railtie"
+require "rails/test_unit/railtie"
+# require 'rails'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -21,6 +25,21 @@ module Info
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    # config.active_record.raise_in_transactional_callbacks = true
+    config.time_zone = 'Beijing'
+    config.exceptions_app = self.routes
+    config.autoload_paths << Rails.root.join('lib')
+    config.middleware.delete Rack::Lock
+    config.generators do |g|
+      g.assets false
+      g.helper false
+    end
+
+    config.middleware.use Rack::Cors, debug: false do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :patch, :put, :delete], expose: ['Link', 'X-Records']
+      end
+    end
   end
 end
