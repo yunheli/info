@@ -11,7 +11,7 @@ flow:
         export FLOW_GIT_CHANGELOG=test
         export FLOW_GIT_COMMITER=WILL
         export FLOW_GIT_COMMIT_ID=1234
-        export FLOW_GIT_COMPARE_ID=1234..121211
+        export FLOW_GIT_COMPARE_ID=1234..1212111
         echo $FLOW_WORKSPACE
         mkdir -p $FLOW_WORKSPACE
      - name: step2
