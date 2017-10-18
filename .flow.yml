@@ -1,1 +1,29 @@
-ssss
+flow:
+  - script: "echo 'hello world'"
+    envs:
+      FLOW_WORKSPACE: "~/flow-platform/test/id/1/1/3"
+      FLOW_VERSION: "1.0.0.0.0"
+    steps:
+     - 
+       allowFailure: false
+       script: |
+        export FLOW_GIT_BRANCH=master
+        export FLOW_GIT_CHANGELOG=test
+        export FLOW_GIT_COMMITER=WILL
+        export FLOW_GIT_COMMIT_ID=1234
+        export FLOW_GIT_COMPARE_ID=1234..12121111
+        echo $FLOW_WORKSPACE
+        mkdir -p $FLOW_WORKSPACE
+        sleep 10
+     - name: step2
+       allowFailure: true
+       script: |
+        cd $FLOW_WORKSPACE
+        git clone git@github.com:yunheli/info.git
+     - name: step3
+       allowFailure: false
+       script: |
+        cd $FLOW_WORKSPACE
+        cd info
+        bundle
+        rake test
