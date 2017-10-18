@@ -1,4 +1,4 @@
-flow1:
+flow:
   - script: "echo 'hello world'"
     envs:
       FLOW_WORKSPACE: "~/flow-platform/test/id/1/1/3"
