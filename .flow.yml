@@ -26,4 +26,4 @@ flow:
         cd $FLOW_WORKSPACE
         cd info
         bundle
-        rake test
+        rake test 
