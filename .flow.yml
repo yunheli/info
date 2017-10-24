@@ -15,17 +15,14 @@ flow:
         echo $FLOW_WORKSPACE
         mkdir -p $FLOW_WORKSPACE
         echo a
-        sleep 1
         echo b
-        sleep 1
         echo c
-        sleep 1
         echo d
      - name: step2
        allowFailure: true
        script: |
         cd $FLOW_WORKSPACE
-        git clone git@github.com:yunheli/info.git
+        echo a
      - name: step3
        allowFailure: false
        script: |
@@ -34,12 +31,27 @@ flow:
         #bundle
         #rake test 
         echo 1
-        sleep 1
-        echo 2
-        sleep 1
-        echo 3
-        echo 4
-        sleep 1
-        echo 5
-        echo 6
-        echo 7
+     - name: step4
+       allowFailure: false
+       script: |
+        #cd $FLOW_WORKSPACE
+        #cd info
+        #bundle
+        #rake test 
+        echo 1
+     - name: step5
+       allowFailure: false
+       script: |
+        #cd $FLOW_WORKSPACE
+        #cd info
+        #bundle
+        #rake test 
+        echo 1 
+     - name: step6
+       allowFailure: false
+       script: |
+        #cd $FLOW_WORKSPACE
+        #cd info
+        #bundle
+        #rake test 
+        echo 1
