@@ -19,11 +19,6 @@ flow:
         echo c
         echo d
         max=5
-        for i in `seq 2 $max`
-        do
-          sleep 1 
-          echo "$i"
-        done
      - name: step2
        allowFailure: true
        script: |
@@ -61,9 +56,4 @@ flow:
         #bundle
         #rake test 
         echo a
-        max=5
-        for i in `seq 2 $max`
-        do
-          sleep 1 
-          echo "$i"
-        done
+      
