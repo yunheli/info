@@ -30,7 +30,7 @@ flow:
         #cd info
         #bundle
         #rake test 
-        echo 1
+        echo a
      - name: step4
        allowFailure: false
        script: |
@@ -38,7 +38,7 @@ flow:
         #cd info
         #bundle
         #rake test 
-        echo 1
+        echo a
      - name: step5
        allowFailure: false
        script: |
@@ -46,7 +46,7 @@ flow:
         #cd info
         #bundle
         #rake test 
-        echo 1 
+        echo a
      - name: step6
        allowFailure: false
        script: |
@@ -54,4 +54,4 @@ flow:
         #cd info
         #bundle
         #rake test 
-        echo 1
+        echo a
