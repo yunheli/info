@@ -20,6 +20,11 @@ flow:
         echo c
         echo d
         max=5
+        max=10
+        for i in `seq 2 $max`
+        do
+          echo "$i"
+        done
      - name: step2
        allowFailure: true
        script: |
@@ -33,6 +38,11 @@ flow:
         #bundle
         #rake test 
         echo a
+        max=10
+        for i in `seq 2 $max`
+        do
+          echo "$i"
+        done
      - name: step4
        allowFailure: false
        script: |
@@ -41,6 +51,11 @@ flow:
         #bundle
         #rake test 
         echo a
+        max=10
+        for i in `seq 2 $max`
+        do
+          echo "$i"
+        done
      - name: step5
        allowFailure: false
        script: |
@@ -49,6 +64,11 @@ flow:
         #bundle
         #rake test 
         echo a
+        max=10
+        for i in `seq 2 $max`
+        do
+          echo "$i"
+        done
      - name: step6
        allowFailure: false
        script: |
@@ -57,4 +77,9 @@ flow:
         #bundle
         #rake test 
         echo a
+        max=10
+        for i in `seq 2 $max`
+        do
+          echo "$i"
+        done
       
