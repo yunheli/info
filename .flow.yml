@@ -23,6 +23,7 @@ flow:
         max=10
         for i in `seq 2 $max`
         do
+          sleep 1
           echo "$i"
         done
      - name: step2
@@ -80,6 +81,7 @@ flow:
         max=10
         for i in `seq 2 $max`
         do
+          sleep 1
           echo "$i"
         done
       
