@@ -2,21 +2,21 @@ name: fir-cli
 description: Posts Wercker build/deploy status to a Slack channel.
 language: java
 inputs:
-  name:
+  - name: username
     type: string
     default: admin
     required: true
-  password:
+  - name: password
     type: string
     required: true
-  age:
+  - name: age
     type: integer
     required: true
-  isMarried:
+  - name: isMarried
     type: boolean
     required: true
     default: true
-  cities:
+  - name: cities
     type: list
     required: false
     values:
